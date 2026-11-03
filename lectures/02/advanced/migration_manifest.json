@@ -1,0 +1,209 @@
+{
+  "schema_version": 1,
+  "experiment_date_jst": "2026-11-02",
+  "migration_date_jst": "2026-11-03",
+  "source_repository": "https://github.com/shikibuton10x/lecture-ai-engineering-2026-submission",
+  "source_pr": 2,
+  "source_base_commit": "112b0f8cf23e9585f4546ddd45c5f462866a1e03",
+  "source_merge_commit": "018670fd9ac5deeccbcc83b643ef6fc9e987bbc1",
+  "destination_repository": "https://github.com/shikibuton10x/lecture-ai-engineering-2026-coursework",
+  "destination_base_commit": "7fcbb7c5ff892bcce3c559c69172450ef6dfe6f5",
+  "retained_upstream_commit": "fae899a409e2c99feee9d44a3789f936f5fc64ee",
+  "model_api_calls_during_migration": 0,
+  "training_runs_during_migration": 0,
+  "model_inference_runs_during_migration": 0,
+  "backup_archive": {
+    "name": "20261102_colab_T4_glossary_sft.zip",
+    "sha256": "cb6a7386e8de81bbb34e15af24d20657a87582630d71a073718a1c3f743aa259"
+  },
+  "source_pr_files": {
+    ".gitignore": {
+      "sha256": "71347334b7f7f32159553023102a56f3d2bc9abc27d1fc1d94118fed8af1b7e3",
+      "preserved_byte_identical": false
+    },
+    "lectures/02/advanced/README.md": {
+      "sha256": "678867748567e27dc0c919dc6c31752df37d9147538a1e300c5435336bc9d3ad",
+      "preserved_byte_identical": false
+    },
+    "lectures/02/advanced/answer_audit.json": {
+      "sha256": "1de96a448234d92e006f0f7169c0b056ad9b0770d17968d6ba95a69ccba5f324",
+      "preserved_byte_identical": true
+    },
+    "lectures/02/advanced/comparison.csv": {
+      "sha256": "f89e47a8c447313ad7ce00ce6494ba3337dc121367c468214f4483bf5b9e81b1",
+      "preserved_byte_identical": true
+    },
+    "lectures/02/advanced/config.json": {
+      "sha256": "3cf81822f9ebbf4fc64e7935b627177702c427213f4c2eb09fa4b64e0b456a9a",
+      "preserved_byte_identical": true
+    },
+    "lectures/02/advanced/dataset_manifest.json": {
+      "sha256": "eb5bd2215d1f3a377aaa21bcafee3b01b524602daaf5f1280af4d5f38c03cf27",
+      "preserved_byte_identical": true
+    },
+    "lectures/02/advanced/environment.json": {
+      "sha256": "7b0208f45661b6e81c276944ebe2ebcead86e935466bfa375e1f826daad7aa51",
+      "preserved_byte_identical": true
+    },
+    "lectures/02/advanced/eval_base_closedbook.json": {
+      "sha256": "35fbf91c0ce93d93fca641ddeee0ba6fc168bf0dd67715e09eea2a0ef05dd57e",
+      "preserved_byte_identical": true
+    },
+    "lectures/02/advanced/eval_base_rag.json": {
+      "sha256": "20fef3e4a1bb167caaa04b7ff69aac0d01a28d44d15bb5083e321fa501ed5de8",
+      "preserved_byte_identical": true
+    },
+    "lectures/02/advanced/eval_search_only.json": {
+      "sha256": "32f34195347b2d3005ebbaa8a589dac5329d5aceeecc8b41a830094c394736c6",
+      "preserved_byte_identical": true
+    },
+    "lectures/02/advanced/eval_sft_closedbook.json": {
+      "sha256": "4e6c383183b56cd085c9db73edab301a5de911ec095abb45741ebadee0b37f1e",
+      "preserved_byte_identical": true
+    },
+    "lectures/02/advanced/evaluation_gold.jsonl": {
+      "sha256": "dcbb5568b7996020cc273046c42771fca346b3f3992b2d71db5063283a6bd48f",
+      "preserved_byte_identical": true
+    },
+    "lectures/02/advanced/experiment_plan.md": {
+      "sha256": "ac55237250647dbe3ffc92a74a83386175a73a1d4a31be0ceee21dab4f5751fb",
+      "preserved_byte_identical": true
+    },
+    "lectures/02/advanced/faq_baseline/eval_after.json": {
+      "sha256": "e11079a82e6afa2aa482e87b962d15699bc879c8d62539a8cd8a04a39f54c981",
+      "preserved_byte_identical": true
+    },
+    "lectures/02/advanced/faq_baseline/eval_before.json": {
+      "sha256": "8bac67d36b41db94a7c64968ff5ef88cd92dd06119d24f235e0411fb5b3bd1fb",
+      "preserved_byte_identical": true
+    },
+    "lectures/02/advanced/faq_baseline/gold.json": {
+      "sha256": "8b99cd31e6563082c4c0e533546c0ffd1e9bc819d9f11979800a5529d45da9e1",
+      "preserved_byte_identical": true
+    },
+    "lectures/02/advanced/faq_baseline/result.json": {
+      "sha256": "511f1a1bf7bf039ef316c9d5e0c9a23e2f2e3d15a682aebd27a8fb3cc7bbb867",
+      "preserved_byte_identical": true
+    },
+    "lectures/02/advanced/faq_baseline/runtime.json": {
+      "sha256": "3a36cacd5d8ac36e7108a33db7857a6dbde4ac282d5d0cd3e71ca0f4b6e1e857",
+      "preserved_byte_identical": true
+    },
+    "lectures/02/advanced/faq_baseline/test.jsonl": {
+      "sha256": "b0d24cf56710a5539c42230ad5bb0b6ffc1f0b313a40603e1a03ad0b4bce9295",
+      "preserved_byte_identical": true
+    },
+    "lectures/02/advanced/faq_baseline/train.jsonl": {
+      "sha256": "33725676d0c9e6dfe8d2e0977dddda1b1d74f2892b60b06d39c5248c3c9d706b",
+      "preserved_byte_identical": true
+    },
+    "lectures/02/advanced/glossary_sft.jsonl": {
+      "sha256": "af6ac820e0331d8d9af376e3b4cccff1b31f2f0f8bb462839752e3282bbd1081",
+      "preserved_byte_identical": true
+    },
+    "lectures/02/advanced/result.json": {
+      "sha256": "43a99debc30fd7f95193cbbe11d66785702299cae2d3c9993438eca35e2f18f1",
+      "preserved_byte_identical": true
+    },
+    "lectures/02/advanced/source_manifest.json": {
+      "sha256": "468904659e693a9d917003e8f06b324a75ffbc0a8cd147e6ccf0aad97b669a70",
+      "preserved_byte_identical": true
+    },
+    "lectures/02/advanced/train_messages.jsonl": {
+      "sha256": "da8f986fbbd8a71fe615e115409fa3f364b348677c95ed13e0361dc070d3101c",
+      "preserved_byte_identical": true
+    },
+    "lectures/02/advanced/training.json": {
+      "sha256": "40e0b28fb41cae527938e04007888b733a58ca846155c337f6b32a5bdf1419f6",
+      "preserved_byte_identical": true
+    },
+    "lectures/02/advanced/valid_messages.jsonl": {
+      "sha256": "40630ccbfb7edda3a53f7dd2c70ca8d90ec475d3da603d1ed3f947f3a34af4e4",
+      "preserved_byte_identical": true
+    },
+    "lectures/02/answer.md": {
+      "sha256": "3bcb7fb8b6e946875d0b4ca6a4a772b17a18ba3a3fd7a092a6b34633aa3e2273",
+      "preserved_byte_identical": true
+    },
+    "notebooks/glossary_sft_comparison.ipynb": {
+      "sha256": "a753499f82c73a9b2077dfda91234349132f0fb8ac66862dd654c11bb2971be0",
+      "preserved_byte_identical": true
+    },
+    "notebooks/glossary_sft_comparison_output.ipynb": {
+      "sha256": "fbe22b997018ef98dc26430c577b675d1bc26b20e96b4e90918dec78a1b06d50",
+      "preserved_byte_identical": true
+    },
+    "notebooks/lora_format_tuning_baseline.ipynb": {
+      "sha256": "d83d0c5cfee45e08dc42002731247394e1276974aa882fe5d88f81e8aa16481f",
+      "preserved_byte_identical": true
+    },
+    "notebooks/lora_format_tuning_baseline_output.ipynb": {
+      "sha256": "154f3d2cfa02af50d69f6e8d9b5a3dde435dcc74b583cc3db79488fd0c0d437b",
+      "preserved_byte_identical": true
+    },
+    "scripts/glossary_experiment.py": {
+      "sha256": "64144b3617dd0f7158f0339c82dad1346d60c4ed14587f0c9b669965a9150b64",
+      "preserved_byte_identical": true
+    },
+    "scripts/prepare_glossary_experiment.py": {
+      "sha256": "6d92df68c5cadacdb495eb520c0b5df8fa588d6790d650efbf6865da1b97d038",
+      "preserved_byte_identical": true
+    },
+    "tests/test_glossary_experiment.py": {
+      "sha256": "9708c4e58b1e12d9e8598c8e7b2cafc29678cb024e77f38e1636df5ea33fbb1a",
+      "preserved_byte_identical": true
+    }
+  },
+  "restored_file_sha256": {
+    "lectures/02/advanced/adapter/README.md": "ffbaadda814d17161c96abbe2d433063e2097ce9f004b10662fbf19f1ca1ff4f",
+    "lectures/02/advanced/adapter/adapter_config.json": "81452e020ffbe3ae71a95eb718e7b8bfc15d89b31a643f4455f76d4513240818",
+    "lectures/02/advanced/adapter/adapter_model.safetensors": "cf3bf0838230a89a2bf86bf1698ec4b486d3ceb1467a640369745e96792bbb7d",
+    "lectures/02/advanced/experiment_source/app/tools.py": "76fe15419707e59d437d9f834b013a6b9c4c56ae7ad964a25dd94154abf9323e",
+    "lectures/02/advanced/experiment_source/data/glossary.json": "4b614a08a754bf6cf714f905f185ad5ef22e0957c7e64434a4b418edb68c2319",
+    "lectures/02/advanced/experiment_source/scripts/glossary_experiment.py": "64144b3617dd0f7158f0339c82dad1346d60c4ed14587f0c9b669965a9150b64",
+    "lectures/02/advanced/experiment_source/scripts/make_sft_dataset.py": "d048bac47de883d9c97ab9f24e912f54e086c508d509820866d6483d2a74635e",
+    "lectures/02/advanced/experiment_source/scripts/prepare_glossary_experiment.py": "6d92df68c5cadacdb495eb520c0b5df8fa588d6790d650efbf6865da1b97d038",
+    "lectures/02/advanced/faq_baseline/adapter/README.md": "ffbaadda814d17161c96abbe2d433063e2097ce9f004b10662fbf19f1ca1ff4f",
+    "lectures/02/advanced/faq_baseline/adapter/adapter_config.json": "6c609425ce2e784c61e37211aeb35d0b0091460ae29d2b09176539e8f71c87f0",
+    "lectures/02/advanced/faq_baseline/adapter/adapter_model.safetensors": "545cd6529756339a99a08c352963a79fe5acfe9bd47832fa61fcf230a7d770d1"
+  },
+  "artifact_sha256": {
+    "lectures/02/advanced/answer_audit.json": "1de96a448234d92e006f0f7169c0b056ad9b0770d17968d6ba95a69ccba5f324",
+    "lectures/02/advanced/comparison.csv": "f89e47a8c447313ad7ce00ce6494ba3337dc121367c468214f4483bf5b9e81b1",
+    "lectures/02/advanced/config.json": "3cf81822f9ebbf4fc64e7935b627177702c427213f4c2eb09fa4b64e0b456a9a",
+    "lectures/02/advanced/dataset_manifest.json": "eb5bd2215d1f3a377aaa21bcafee3b01b524602daaf5f1280af4d5f38c03cf27",
+    "lectures/02/advanced/environment.json": "7b0208f45661b6e81c276944ebe2ebcead86e935466bfa375e1f826daad7aa51",
+    "lectures/02/advanced/eval_base_closedbook.json": "35fbf91c0ce93d93fca641ddeee0ba6fc168bf0dd67715e09eea2a0ef05dd57e",
+    "lectures/02/advanced/eval_base_rag.json": "20fef3e4a1bb167caaa04b7ff69aac0d01a28d44d15bb5083e321fa501ed5de8",
+    "lectures/02/advanced/eval_search_only.json": "32f34195347b2d3005ebbaa8a589dac5329d5aceeecc8b41a830094c394736c6",
+    "lectures/02/advanced/eval_sft_closedbook.json": "4e6c383183b56cd085c9db73edab301a5de911ec095abb45741ebadee0b37f1e",
+    "lectures/02/advanced/evaluation_gold.jsonl": "dcbb5568b7996020cc273046c42771fca346b3f3992b2d71db5063283a6bd48f",
+    "lectures/02/advanced/experiment_plan.md": "ac55237250647dbe3ffc92a74a83386175a73a1d4a31be0ceee21dab4f5751fb",
+    "lectures/02/advanced/faq_baseline/eval_after.json": "e11079a82e6afa2aa482e87b962d15699bc879c8d62539a8cd8a04a39f54c981",
+    "lectures/02/advanced/faq_baseline/eval_before.json": "8bac67d36b41db94a7c64968ff5ef88cd92dd06119d24f235e0411fb5b3bd1fb",
+    "lectures/02/advanced/faq_baseline/gold.json": "8b99cd31e6563082c4c0e533546c0ffd1e9bc819d9f11979800a5529d45da9e1",
+    "lectures/02/advanced/faq_baseline/result.json": "511f1a1bf7bf039ef316c9d5e0c9a23e2f2e3d15a682aebd27a8fb3cc7bbb867",
+    "lectures/02/advanced/faq_baseline/runtime.json": "3a36cacd5d8ac36e7108a33db7857a6dbde4ac282d5d0cd3e71ca0f4b6e1e857",
+    "lectures/02/advanced/faq_baseline/test.jsonl": "b0d24cf56710a5539c42230ad5bb0b6ffc1f0b313a40603e1a03ad0b4bce9295",
+    "lectures/02/advanced/faq_baseline/train.jsonl": "33725676d0c9e6dfe8d2e0977dddda1b1d74f2892b60b06d39c5248c3c9d706b",
+    "lectures/02/advanced/glossary_sft.jsonl": "af6ac820e0331d8d9af376e3b4cccff1b31f2f0f8bb462839752e3282bbd1081",
+    "lectures/02/advanced/result.json": "43a99debc30fd7f95193cbbe11d66785702299cae2d3c9993438eca35e2f18f1",
+    "lectures/02/advanced/source_manifest.json": "468904659e693a9d917003e8f06b324a75ffbc0a8cd147e6ccf0aad97b669a70",
+    "lectures/02/advanced/train_messages.jsonl": "da8f986fbbd8a71fe615e115409fa3f364b348677c95ed13e0361dc070d3101c",
+    "lectures/02/advanced/training.json": "40e0b28fb41cae527938e04007888b733a58ca846155c337f6b32a5bdf1419f6",
+    "lectures/02/advanced/valid_messages.jsonl": "40630ccbfb7edda3a53f7dd2c70ca8d90ec475d3da603d1ed3f947f3a34af4e4",
+    "lectures/02/answer.md": "3bcb7fb8b6e946875d0b4ca6a4a772b17a18ba3a3fd7a092a6b34633aa3e2273",
+    "notebooks/glossary_sft_comparison.ipynb": "a753499f82c73a9b2077dfda91234349132f0fb8ac66862dd654c11bb2971be0",
+    "notebooks/glossary_sft_comparison_output.ipynb": "fbe22b997018ef98dc26430c577b675d1bc26b20e96b4e90918dec78a1b06d50",
+    "notebooks/lora_format_tuning_baseline.ipynb": "d83d0c5cfee45e08dc42002731247394e1276974aa882fe5d88f81e8aa16481f",
+    "notebooks/lora_format_tuning_baseline_output.ipynb": "154f3d2cfa02af50d69f6e8d9b5a3dde435dcc74b583cc3db79488fd0c0d437b",
+    "scripts/glossary_experiment.py": "64144b3617dd0f7158f0339c82dad1346d60c4ed14587f0c9b669965a9150b64",
+    "scripts/prepare_glossary_experiment.py": "6d92df68c5cadacdb495eb520c0b5df8fa588d6790d650efbf6865da1b97d038",
+    "tests/test_glossary_experiment.py": "9708c4e58b1e12d9e8598c8e7b2cafc29678cb024e77f38e1636df5ea33fbb1a"
+  },
+  "notes": [
+    "元PRの34ファイルのうち回答・コード・データ・結果・ノートブックを含む32ファイルは同一バイト列。READMEと.gitignoreだけ移行に合わせて更新。",
+    "source_manifest.jsonの5つのパスはlectures/02/advanced/experiment_source/を基準に照合する。",
+    "adapter設定のrevisionはnullのため、ベースモデルの固定revisionはconfig.jsonとFAQのresult.jsonに従う。"
+  ]
+}

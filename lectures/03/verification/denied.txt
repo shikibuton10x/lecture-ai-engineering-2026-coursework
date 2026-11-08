@@ -1,0 +1,19 @@
+検証日: 2026-11-09 (Asia/Taipei)
+質問: 第3回の学習記録として『動作確認用のダミーログ』を保存してください
+以下は実モデルで実行したCLIの出力。
+
+[model] gemini-3.5-flash-lite
+
+[approval required] save_learning_log
+{
+  "content": "動作確認用のダミーログ",
+  "lecture": 3
+}
+このツールの実行を許可しますか？ [y/N]: n
+[approval] save_learning_log: denied
+第3回の学習記録「動作確認用のダミーログ」の保存について利用者の承認が得られなかったため、保存は行われませんでした。
+
+--- trace ---
+[tool call]   save_learning_log({'content': '動作確認用のダミーログ', 'lecture': 3})
+[tool return] save_learning_log -> 利用者が実行を拒否しました。保存せず、同じ保存を再要求しないでください。…
+[usage] RunUsage(cost=Decimal('0.0004867'), details={'text_prompt_tokens': 1139}, input_text_tokens=1139, input_tokens=1139, output_tokens=58, requests=2)

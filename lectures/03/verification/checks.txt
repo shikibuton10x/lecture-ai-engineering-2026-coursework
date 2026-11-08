@@ -1,0 +1,31 @@
+検証日: 2026-11-09 (Asia/Taipei)
+Python 3.12.12 / pydantic-ai-slim 2.57.0 / Gemini gemini-3.5-flash-lite
+
+1. 最初の承認待ちでファイル状態を別プロセスから確認
+learning_log directory exists: False
+saved JSON files: 0
+
+2. yで承認した後のファイル状態
+saved JSON files: 1
+file: 20261108T214634Z_a575557f3da64f9c96786161f9ef3921.json
+sha256: 8d5e08182d95520f591402f62972dcd0978fe64a4c7c565989b955fc1b1ebff5
+record: {"lecture": 3, "content": "動作確認用のダミーログ", "created_at": "2026-11-08T21:46:34.316457+00:00"}
+
+3. 同じ質問でnを入力した後、件数と既存ファイルのSHA-256をassertで確認
+After denial: 1 JSON file; existing content unchanged (SHA-256 matched).
+
+4. 関連する自動テスト
+$ .venv/bin/python -m pytest -q tests/test_learning_log.py tests/test_agent.py tests/test_tools.py --tb=short
+29 passed in 0.86s
+
+5. 全体の自動テスト（MCPの子プロセスがuvキャッシュにアクセスできる環境で実施）
+$ .venv/bin/python -m pytest -q --tb=short
+44 passed, 35 subtests passed in 1.28s
+
+6. ツール一覧（APIキー不要）
+$ .venv/bin/python -m app.agent --list-tools
+モデルに見えているツール: 3 個
+search_glossary / get_lecture_summary / save_learning_log
+
+承認・再開の仕様の参照先:
+https://pydantic.dev/docs/ai/tools-toolsets/deferred-tools/#human-in-the-loop-tool-approval

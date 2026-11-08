@@ -1,0 +1,51 @@
+{
+  "date": "2026-11-09",
+  "timezone": "Asia/Taipei",
+  "pi_version": "1.5.0",
+  "source_repository": "https://github.com/earendil-works/pi",
+  "source_tag": "v1.5.0",
+  "source_commit": "f9a26365568127461c47a07a37dcb42c140a3ac5",
+  "npm_integrity": "sha512-xNDZ5kqowO6Z03FS2gwAkPEGk1ssxVcYKQ6qZId84mFEvwACvvyc2l0vAMOS+c5zvxLRMLBE9r4y44IGYkMJaQ==",
+  "sources": {
+    "packages/coding-agent/src/core/system-prompt.ts": {
+      "blob_sha": "e51e14fe4065d73c3a85947000eff04402fa7a52",
+      "url": "https://github.com/earendil-works/pi/blob/f9a26365568127461c47a07a37dcb42c140a3ac5/packages/coding-agent/src/core/system-prompt.ts"
+    },
+    "packages/coding-agent/docs/sdk.md": {
+      "blob_sha": "7d0883b3ff7926c077414ccce9b4f7aa31f7065b",
+      "url": "https://github.com/earendil-works/pi/blob/f9a26365568127461c47a07a37dcb42c140a3ac5/packages/coding-agent/docs/sdk.md"
+    },
+    "packages/coding-agent/docs/providers.md": {
+      "blob_sha": "0da96ddf64ef16b1ddb444d8fdf827cae21bd01d",
+      "url": "https://github.com/earendil-works/pi/blob/f9a26365568127461c47a07a37dcb42c140a3ac5/packages/coding-agent/docs/providers.md"
+    },
+    "packages/coding-agent/README.md": {
+      "blob_sha": "db40c5e12c00d7a068a9642744dc6a9af528a099",
+      "url": "https://github.com/earendil-works/pi/blob/f9a26365568127461c47a07a37dcb42c140a3ac5/packages/coding-agent/README.md"
+    },
+    "packages/coding-agent/src/core/tools/read.ts": {
+      "blob_sha": "8fb93a679e5378150646d6503aa0ebd490ac7fac",
+      "url": "https://github.com/earendil-works/pi/blob/f9a26365568127461c47a07a37dcb42c140a3ac5/packages/coding-agent/src/core/tools/read.ts"
+    },
+    "packages/coding-agent/src/core/tools/bash.ts": {
+      "blob_sha": "2084d6f7c67b597e4645b1b81da4ceae2f73d429",
+      "url": "https://github.com/earendil-works/pi/blob/f9a26365568127461c47a07a37dcb42c140a3ac5/packages/coding-agent/src/core/tools/bash.ts"
+    },
+    "packages/coding-agent/src/core/tools/edit.ts": {
+      "blob_sha": "bb6aeff598314f1654e6f6235a324c9fff5d993f",
+      "url": "https://github.com/earendil-works/pi/blob/f9a26365568127461c47a07a37dcb42c140a3ac5/packages/coding-agent/src/core/tools/edit.ts"
+    },
+    "packages/coding-agent/src/core/tools/write.ts": {
+      "blob_sha": "9e6b296dc08d1d09391cc002ebf45b529761964f",
+      "url": "https://github.com/earendil-works/pi/blob/f9a26365568127461c47a07a37dcb42c140a3ac5/packages/coding-agent/src/core/tools/write.ts"
+    },
+    "packages/coding-agent/docs/security.md": {
+      "blob_sha": "4f0dc290fe1011883cd64c729f07bfe046feb9b1",
+      "url": "https://github.com/earendil-works/pi/blob/f9a26365568127461c47a07a37dcb42c140a3ac5/packages/coding-agent/docs/security.md"
+    },
+    "packages/coding-agent/docs/cli.md": {
+      "blob_sha": "8861d22adce8ffb8d82ea784c5bd10125304ef1f",
+      "url": "https://github.com/earendil-works/pi/blob/f9a26365568127461c47a07a37dcb42c140a3ac5/packages/coding-agent/docs/cli.md"
+    }
+  }
+}

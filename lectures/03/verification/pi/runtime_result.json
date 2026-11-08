@@ -1,0 +1,88 @@
+{
+  "date": "2026-11-09",
+  "environment": "GitHub Codespaces (2-core)",
+  "node": "v26.13.0",
+  "npm": "11.20.0",
+  "pi_version": "1.5.0",
+  "provider": "google",
+  "model": "gemini-3.8-flash",
+  "question": "glossary.jsonをreadツールで読んでから、日本語で回答してください。AIE2026の講座の宿題にある「3レベル」とは何ですか？ファイルは変更しないでください。",
+  "tools": [
+    {
+      "name": "read",
+      "args": {
+        "limit": 100,
+        "offset": 1,
+        "path": "glossary.json"
+      }
+    }
+  ],
+  "results": [
+    {
+      "name": "read",
+      "isError": false
+    }
+  ],
+  "answer": "`glossary.json` によると、AIE2026の講座における宿題の「3レベル」とは、以下の3段階の構成を指します。\n\n1. **基礎**：講義内容の確認\n2. **実装**：自分でコードを書く\n3. **発展**：調査や試行\n\nどれか1つに取り組めばその回の宿題は完了となり、原則として採点は行われません。",
+  "model_responses": 2,
+  "usage": [
+    {
+      "input": 1376,
+      "output": 102,
+      "cacheRead": 0,
+      "cacheWrite": 0,
+      "reasoning": 75,
+      "totalTokens": 1478,
+      "cost": {
+        "input": 0.001032,
+        "output": 0.00038250000000000003,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0.0014145,
+        "totalFromProvider": false
+      }
+    },
+    {
+      "input": 1651,
+      "output": 182,
+      "cacheRead": 0,
+      "cacheWrite": 0,
+      "reasoning": 88,
+      "totalTokens": 1833,
+      "cost": {
+        "input": 0.00123825,
+        "output": 0.0006825000000000001,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "total": 0.0019207500000000001,
+        "totalFromProvider": false
+      }
+    }
+  ],
+  "fixture": {
+    "terms": [
+      {
+        "id": "homework-levels",
+        "term": "宿題の3レベル",
+        "aliases": [
+          "3レベル",
+          "宿題レベル"
+        ],
+        "lecture": 1,
+        "category": "講座",
+        "definition": "AIE2026の宿題の構成。「基礎（講義内容の確認）」「実装（自分でコードを書く）」「発展（調査や試行）」の3段階があり、どれか1つに取り組めばその回の宿題は完了。原則として採点はしない。",
+        "related": [
+          "answer-md"
+        ]
+      }
+    ]
+  },
+  "fixture_sha256": "6edc50ae081eb1f903e4c558c098e1db039e4d65e4815c7dd583513717335112",
+  "fixture_unchanged": true,
+  "api_key_persisted_in_auth_file": false,
+  "cleanup": {
+    "api_key_env_cleared": true,
+    "codespace_state": "stopped",
+    "verification": "実行結果画面とCodespace is stoppedの表示を確認"
+  }
+}

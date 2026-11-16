@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "at": "2026-11-16T11:06:02+08:00",
+  "fixed_inputs_verified": true,
+  "summaries_recomputed": true,
+  "annotations_fixed_before_grading": true,
+  "sha256": {
+    "data/eval/my_cases.jsonl": "b1e9e2eb59ba47f7c5aa7117178aa4f0c268119352400178f1cd4765ff061740",
+    "data/eval/my_rubric.md": "12056a4ff9720d2d4f78ebdce50db063cad3b6bfa9d75ffc2876ba70cbea2ec4",
+    "lectures/04/my_labels.jsonl": "d08899821f553753783d2d6b030e1c46fb9711c817f8f875500b86681b916225",
+    "lectures/04/my_judge_result.json": "b999634920c30ce03a19ec4a1c763510d38e2cf59132acd9b62b53c12b5aaae0",
+    "lectures/04/implementation/generation_trace.json": "c8ed13ffe67c9bde08514d5504314c33ef9b4286da0a9de8bbc9ffeb24463b96",
+    "lectures/04/implementation/label_review.json": "971f9a0c6368d10cfc72e06e9d5bb8265afe8cd05dad8524c8a65379328db674",
+    "lectures/04/implementation/code_checks.json": "3fc5a32835ca66e5af8d414d5176c34e335df6c3f1d2f66c504c390ca880adda",
+    "lectures/04/implementation/case_results.csv": "f1ca227f28a1521f2cebac3a5f34290f9eb0446b01aeddc08c9e5efb841b64f1",
+    "lectures/04/implementation/analysis.json": "e089695b5234a65fb029329432fd6296c33c037e91d9a7cab585d8e4d852d93a"
+  }
+}

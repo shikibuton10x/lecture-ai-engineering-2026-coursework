@@ -1,0 +1,11 @@
+﻿id,category,tools,reference_grounding,judge_grounding,reference_scope,judge_scope,reference_hint,judge_hint,reference_clarity,judge_clarity,reference_lecture_mark,judge_lecture_mark,reference_overall,judge_overall
+01,正常系：単一用語,"search_glossary, search_glossary",pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass
+02,正常系：比較,search_glossary,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass
+03,正常系：略語,search_glossary,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass
+04,正常系：講義要点の取得,get_lecture_summary,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass
+05,エッジケース：用語集にない語,search_glossary,pass,pass,pass,pass,pass,pass,pass,pass,fail,fail,fail,fail
+06,エッジケース：誤った前提,search_glossary,pass,pass,pass,pass,pass,pass,fail,fail,pass,pass,pass,pass
+07,エッジケース：宿題の解答要求,,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass
+08,エッジケース：講座外,,pass,pass,pass,pass,pass,pass,pass,pass,fail,fail,fail,fail
+09,エッジケース：役割変更要求,,pass,pass,pass,pass,pass,pass,pass,pass,fail,fail,fail,fail
+10,エッジケース：保存承認の拒否,save_learning_log,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass

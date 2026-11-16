@@ -1,0 +1,30 @@
+{
+  "status": "passed",
+  "validated_at": "2026-11-16T10:59:48+08:00",
+  "dataset_revision": "78f471bf655a3137b2e8a75af1501690ec009ec3",
+  "dataset_rows": 500,
+  "read_case_count": 5,
+  "distinct_repositories": 5,
+  "case_membership_and_raw_hashes_verified": true,
+  "pull_request_base_commits_verified": true,
+  "case_summaries_only_no_full_problem_republication": true,
+  "assignment_requirements_covered": [
+    "dataset and URL",
+    "3-5 actual cases",
+    "problem summaries and difficulty",
+    "feasibility discussion based on problem statements and public fixes",
+    "people and construction/validation process",
+    "grading method",
+    "comparison with lecture exercise",
+    "sources and limitations"
+  ],
+  "benchmark_executed": false,
+  "model_api_calls": 0,
+  "sha256": {
+    "lectures/04/advanced/cases_reviewed.json": "2998a5405a2de34e1dfcd6345f6f16e9b7b90e1240a35e5c0966ecbcca6d18fc",
+    "lectures/04/advanced/dataset_snapshot.json": "f361d80d3d2acb5be2a538436e61c6c6ad21e7db1eced1f780839e0ac58fa5b2",
+    "lectures/04/advanced/pull_request_checks.json": "2f9d8b99666ecf657fdf79f2e6b422be108083cfc9dcf1b575f5fa2e0528509b",
+    "lectures/04/advanced/research_report.md": "2591ea175da44d8522e4d2cfe1e82ee3024f0501de22d6d7d8fe7331ee56bddb",
+    "lectures/04/advanced/sources.json": "d5b757dd9d942bbaacff1b624fb46747a57d9f63f474bdc97f766a6345a14bad"
+  }
+}

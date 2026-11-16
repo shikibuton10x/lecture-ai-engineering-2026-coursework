@@ -1,0 +1,57 @@
+{
+  "checked_at": "2026-11-16T09:20:44+08:00",
+  "sources": [
+    {
+      "id": "S1",
+      "title": "Introducing SWE-bench Verified",
+      "url": "https://openai.com/index/introducing-swe-bench-verified/",
+      "published": "2024-08-13",
+      "used_for": "93 reviewers; 1699 candidates; three independent reviews; severity filtering; final 500"
+    },
+    {
+      "id": "S2",
+      "title": "SWE-bench Annotation Instructions",
+      "url": "https://cdn.openai.com/introducing-swe-bench-verified/swe-b-annotation-instructions.pdf",
+      "used_for": "What reviewers inspect; distinction between annotator information and solver information; estimated difficulty"
+    },
+    {
+      "id": "S3",
+      "title": "SWE-bench: Can Language Models Resolve Real-World GitHub Issues?",
+      "url": "https://arxiv.org/abs/2310.06770",
+      "published": "2023-10-10",
+      "used_for": "Original issue/PR dataset and real-world code-repair task"
+    },
+    {
+      "id": "S4",
+      "title": "SWE-bench Verified official overview",
+      "url": "https://www.swebench.com/verified",
+      "used_for": "500-instance human-filtered subset and distinction between model and scaffold comparisons"
+    },
+    {
+      "id": "S5",
+      "title": "SWE-bench evaluation guide",
+      "url": "https://www.swebench.com/SWE-bench/guides/evaluation/",
+      "used_for": "Patch execution in Docker, results and infrastructure failures"
+    },
+    {
+      "id": "S6",
+      "title": "SWE-bench grading implementation",
+      "url": "https://github.com/SWE-bench/SWE-bench/blob/main/swebench/harness/grading.py",
+      "used_for": "F2P/P2P resolution semantics, no textual equality requirement"
+    },
+    {
+      "id": "S7",
+      "title": "Why SWE-bench Verified no longer measures frontier coding capabilities",
+      "url": "https://openai.com/index/why-we-no-longer-evaluate-swe-bench-verified/",
+      "published": "2026-02-23",
+      "used_for": "Audit of 138 selected tasks; 59.4% finding; contamination and reporting limitations"
+    },
+    {
+      "id": "S8",
+      "title": "Official Hugging Face dataset",
+      "url": "https://huggingface.co/datasets/SWE-bench/SWE-bench_Verified",
+      "revision": "78f471bf655a3137b2e8a75af1501690ec009ec3",
+      "used_for": "Actual five problem statements and reference/test patches; 500-row metadata"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "status": "prepared",
+  "generation_model": "gemini-3.5-flash-lite",
+  "grading_model": "gemini-3.8-flash",
+  "case_count": 10,
+  "case_design": "4 normal + 6 edge cases, fixed before generating answers",
+  "label_provenance": "Comparison labels created with AI and fixed before automatic grading.",
+  "sha256": {
+    "app/agent.py": "59a8cfec7cc9fe46aa97a42053a271160aea90119a61c864b6fc784dff5bb52c",
+    "app/tools.py": "07d62274b94277ecac1abe54f34b43eb82bd078453a045648a9ff7b818c00b6b",
+    "app/judge.py": "aa794c12d46f9caea8b9cc740ffc01cfc231bef012febdc12ae877c4becd42e3",
+    "app/config.py": "1d589149a7421f2fb75c9dec3f49bf1cb9f1640d82104a9511ce91edc4c4cdaa",
+    "data/glossary.json": "804a6ff955f550989a2b02a5f5c98e79ebae58c7c07fd20115d37465f70df204",
+    "data/lectures/04.md": "ab2858442bb5acfd332974acece643c91a7f89ebeebc0bc88f474df17d50bf5e",
+    "data/eval/my_rubric.md": "12056a4ff9720d2d4f78ebdce50db063cad3b6bfa9d75ffc2876ba70cbea2ec4",
+    "lectures/04/implementation/cases_before_generation.jsonl": "043ccf360f47774fbb2605e2943382f5037ef72501926fb8eca96896c522a8ad"
+  }
+}

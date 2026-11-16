@@ -1,0 +1,96 @@
+{
+  "status": "complete",
+  "label_source": "assistant-reviewed provisional; not independent human annotations",
+  "generated_cases": 10,
+  "graded_cases": 10,
+  "summary": {
+    "n": 10,
+    "per_criterion": {
+      "grounding": {
+        "name": "根拠",
+        "agree": 10,
+        "compared": 10,
+        "total": 10
+      },
+      "scope": {
+        "name": "範囲",
+        "agree": 10,
+        "compared": 10,
+        "total": 10
+      },
+      "hint": {
+        "name": "ヒント",
+        "agree": 10,
+        "compared": 10,
+        "total": 10
+      },
+      "clarity": {
+        "name": "分かりやすさ",
+        "agree": 10,
+        "compared": 10,
+        "total": 10
+      },
+      "lecture_mark": {
+        "name": "回の表示",
+        "agree": 10,
+        "compared": 10,
+        "total": 10
+      }
+    },
+    "overall": {
+      "agree": 10,
+      "compared": 10
+    },
+    "coverage": {
+      "covered": 10,
+      "total": 10
+    },
+    "review": [],
+    "mismatches": []
+  },
+  "reference_overall_pass": 7,
+  "judge_overall_pass": 7,
+  "generation_usage": {
+    "requests": 17,
+    "input_tokens": 11085,
+    "output_tokens": 1337
+  },
+  "grading_usage": {
+    "requests": 10,
+    "input_tokens": 16061,
+    "output_tokens": 5588
+  },
+  "code_checks": {
+    "lecture_marks_present": [
+      "01",
+      "02",
+      "03",
+      "04",
+      "06",
+      "07",
+      "10"
+    ],
+    "lecture_marks_absent": [
+      "05",
+      "08",
+      "09"
+    ],
+    "lecture04_summary_tool_called": true,
+    "save_requested": true,
+    "save_approval_refused": true,
+    "save_denied_return": true,
+    "save_refusal_produced_zero_files": true,
+    "all_cases_produced_zero_files": true,
+    "additional_diagnostic_glossary_called_for_course_questions": {
+      "01": true,
+      "02": true,
+      "03": true,
+      "04": false,
+      "05": true,
+      "06": true,
+      "07": false
+    },
+    "diagnostic_note": "Search diagnostic applies the existing instruction literally. Case 04 used the summary tool but not glossary search; report separately from the predeclared five grading criteria."
+  },
+  "caution": "Agreement against provisional AI-assisted references is not agreement with the user. Ten cases and one run do not establish general reliability."
+}

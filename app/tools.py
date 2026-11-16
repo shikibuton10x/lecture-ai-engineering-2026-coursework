@@ -5,10 +5,13 @@
 """
 
 import json
+from datetime import datetime, timezone
 from functools import cache
 from pathlib import Path
+from uuid import uuid4
 
 DATA_DIR = Path(__file__).resolve().parent.parent / "data"
+LEARNING_LOG_DIR = DATA_DIR.parent / "learning_log"
 MAX_RESULTS = 3
 
 
@@ -77,3 +80,33 @@ def get_lecture_summary(lecture: int) -> str:
         available = sorted(p.stem for p in (DATA_DIR / "lectures").glob("*.md"))
         return f"第{lecture}回の要点はまだありません。用意されている回: {', '.join(available)}"
     return path.read_text(encoding="utf-8")
+
+
+def save_learning_log(lecture: int, content: str) -> str:
+    """指定した回の学習内容を learning_log/ に新しい JSON ファイルとして保存する。
+
+    利用者が「第3回で学んだことを保存して」のように、学習記録の保存を
+    明示的に依頼したときに使う。lecture は1以上の講義回、content は保存する本文。
+    実行前に利用者の承認が必要。保存先は固定で、既存のログは上書きしない。
+    """
+    if lecture < 1 or not content.strip():
+        return json.dumps(
+            {"status": "error", "message": "講義回は1以上、学習内容は空でない文字列を指定してください。"},
+            ensure_ascii=False,
+        )
+
+    now = datetime.now(timezone.utc)
+    filename = f"{now:%Y%m%dT%H%M%SZ}_{uuid4().hex}.json"
+    record = {"lecture": lecture, "content": content, "created_at": now.isoformat()}
+    try:
+        LEARNING_LOG_DIR.mkdir(parents=True, exist_ok=True)
+        with (LEARNING_LOG_DIR / filename).open("x", encoding="utf-8") as file:
+            json.dump(record, file, ensure_ascii=False, indent=2)
+            file.write("\n")
+    except OSError as exc:
+        return json.dumps({"status": "error", "message": f"学習ログを保存できませんでした: {exc}"}, ensure_ascii=False)
+
+    return json.dumps(
+        {"status": "saved", "path": f"learning_log/{filename}", "lecture": lecture},
+        ensure_ascii=False,
+    )

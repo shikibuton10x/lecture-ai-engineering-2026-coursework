@@ -1,0 +1,137 @@
+[
+  {
+    "instance_id": "astropy__astropy-12907",
+    "repo": "astropy/astropy",
+    "row_index": 0,
+    "dataset_revision": "78f471bf655a3137b2e8a75af1501690ec009ec3",
+    "viewer_url": "https://huggingface.co/datasets/SWE-bench/SWE-bench_Verified/viewer/default/test?row=0",
+    "pull_request_url": "https://github.com/astropy/astropy/pull/12907",
+    "original_issue_url": "https://github.com/astropy/astropy/issues/12906",
+    "base_commit": "d16bfe05a744909de4b27f5875fe0d4ed41ce607",
+    "difficulty_label": "15 min - 1 hour",
+    "registered_fail_to_pass_count": 2,
+    "registered_pass_to_pass_count": 13,
+    "counts_note": "Dataset fields, not test results from this assignment. No benchmark tests were executed.",
+    "changed_source_files": [
+      "astropy/modeling/separable.py"
+    ],
+    "raw_field_sha256": {
+      "problem_statement": "c01334ec1b21a089c650cf2e7b96ab974469076bf1260d23885799e1f0a7551f",
+      "patch": "0f3e44432ed8540e9526edff4f83793948a2f139fc3971b67c30043c1eb7964a",
+      "test_patch": "5ef90b640ffce4590bb61ef2ea0e3256416dddf41b45bf4f2c3610a6e8c53718"
+    },
+    "summary": "複合モデルを入れ子にすると、本来独立な入出力まで依存しているような行列になる。",
+    "required_behavior": "同じモデルの結合を平坦に書いた場合と入れ子に書いた場合で、入出力の独立性が保たれること。",
+    "difficulty_reason": "数値結果だけでなく依存関係の行列、モデル結合演算と再帰的な部分行列の扱いを理解する必要がある。",
+    "feasibility_discussion": "依存行列を手で追えば原因の候補は考えられる。公開修正も参照したため初見で解けるという判定ではなく、Astropy内部での一般性の検証は未実施。",
+    "test_reading": "追加テストは複数の括り方と入れ子の深さを扱い、同じ独立性を保てるかを確認する。単一の出力例への対応だけでは足りない。"
+  },
+  {
+    "instance_id": "django__django-10097",
+    "repo": "django/django",
+    "row_index": 22,
+    "dataset_revision": "78f471bf655a3137b2e8a75af1501690ec009ec3",
+    "viewer_url": "https://huggingface.co/datasets/SWE-bench/SWE-bench_Verified/viewer/default/test?row=22",
+    "pull_request_url": "https://github.com/django/django/pull/10097",
+    "original_issue_url": "https://code.djangoproject.com/ticket/29528",
+    "base_commit": "b9cf764be62e77b4777b3a75ec256f6209a57671",
+    "difficulty_label": "<15 min fix",
+    "registered_fail_to_pass_count": 438,
+    "registered_pass_to_pass_count": 1427,
+    "counts_note": "Dataset fields, not test results from this assignment. No benchmark tests were executed.",
+    "changed_source_files": [
+      "django/core/validators.py"
+    ],
+    "raw_field_sha256": {
+      "problem_statement": "2288319e7e72693551b8454b5c63f165f23dfb32bc6579ad03602d3cd311bdaa",
+      "patch": "6a3f90e1cd4c886a22787c9388683d57ce177ad4fbb2144dc51db8b6bb0edab4",
+      "test_patch": "e438d278c9964432bb2d514cd48dcb6a1537a3707dea39c60c384ac98078ae1a"
+    },
+    "summary": "URLの認証情報に未エスケープの区切り文字があっても、URLValidatorが不正なURLを受理する。",
+    "required_behavior": "ユーザー名・パスワード部分の不正な文字を拒否しつつ、正当なURLや既存の検証を壊さないこと。",
+    "difficulty_reason": "正規表現の小さな変更でも、認証部・ホスト・パス・クエリの解釈と既存の有効な入力との整合が必要になる。",
+    "feasibility_discussion": "問題文から要件は追える。修正量の小ささだけで容易とはせず、URL文法と既存テストの理解が必要。実装・動作検証はしていない。",
+    "test_reading": "追加された不正URLだけでなく、以前は有効とされていた例の期待値も変更される。今回のテスト登録数は実行数ではなくデータセット列の値として扱う。"
+  },
+  {
+    "instance_id": "pytest-dev__pytest-10051",
+    "repo": "pytest-dev/pytest",
+    "row_index": 330,
+    "dataset_revision": "78f471bf655a3137b2e8a75af1501690ec009ec3",
+    "viewer_url": "https://huggingface.co/datasets/SWE-bench/SWE-bench_Verified/viewer/default/test?row=330",
+    "pull_request_url": "https://github.com/pytest-dev/pytest/pull/10051",
+    "original_issue_url": "https://github.com/pytest-dev/pytest/issues/9877",
+    "base_commit": "aa55975c7d3f6c9f6d7f68accc41bb7cadf0eb9a",
+    "difficulty_label": "15 min - 1 hour",
+    "registered_fail_to_pass_count": 1,
+    "registered_pass_to_pass_count": 15,
+    "counts_note": "Dataset fields, not test results from this assignment. No benchmark tests were executed.",
+    "changed_source_files": [
+      "src/_pytest/logging.py"
+    ],
+    "raw_field_sha256": {
+      "problem_statement": "c8f618a73662951809b75d56e2f6743203138a82223c2a963e6de26f2fa3199c",
+      "patch": "9662c12536a07d0cc5a6ce6f781edb31ea013af4df0e156522ca624aaed634c0",
+      "test_patch": "c25a4ee0d66c1dc4c219f3bd54a0f9b7a9d96513d2d3a42cecb050b7182f3557"
+    },
+    "summary": "caplog.clearの後、段階別ログを得るget_recordsと現在のrecordsが食い違い、以後のログも反映されない。",
+    "required_behavior": "call段階のログを消し、その後の追加も両方から見え、setup段階のログは残ること。",
+    "difficulty_reason": "リストの中身を消す操作と新しいリストへの置換、別オブジェクトが保持する参照、fixtureの段階管理を追う必要がある。",
+    "feasibility_discussion": "Pythonの参照の違いから原因仮説は立てられる。pytest内部の状態管理と別段階への影響はテストで確認する必要があり、今回は未実行。",
+    "test_reading": "消去直後だけでなく、新しいログの追加とsetupログの維持も確認する。直ったように見える一瞬の状態だけで採点しない。"
+  },
+  {
+    "instance_id": "scikit-learn__scikit-learn-10297",
+    "repo": "scikit-learn/scikit-learn",
+    "row_index": 349,
+    "dataset_revision": "78f471bf655a3137b2e8a75af1501690ec009ec3",
+    "viewer_url": "https://huggingface.co/datasets/SWE-bench/SWE-bench_Verified/viewer/default/test?row=349",
+    "pull_request_url": "https://github.com/scikit-learn/scikit-learn/pull/10297",
+    "original_issue_url": "https://github.com/scikit-learn/scikit-learn/issues/10284",
+    "base_commit": "b90661d6a46aa3619d3eec94d5281f5888add501",
+    "difficulty_label": "15 min - 1 hour",
+    "registered_fail_to_pass_count": 1,
+    "registered_pass_to_pass_count": 28,
+    "counts_note": "Dataset fields, not test results from this assignment. No benchmark tests were executed.",
+    "changed_source_files": [
+      "sklearn/linear_model/ridge.py"
+    ],
+    "raw_field_sha256": {
+      "problem_statement": "80b289fedf3bc996489e3ce2ce6f575ea7c8153524ea8736ccd7e0dad0c29a41",
+      "patch": "36db36590ab75976c976fa4aef8b12d64caf9a65f849e7147b56fb67c4e2aa09",
+      "test_patch": "beb2bad0620edaed12bbdbdbfa439099ca5f3619a20fb9dae36b9646ec783e46"
+    },
+    "summary": "RidgeClassifierCVが、文書に示されるstore_cv_values引数を受け取れずTypeErrorになる。",
+    "required_behavior": "引数を受け取り基底クラスへ伝え、学習後に交差検証値を適切な形で保持すること。",
+    "difficulty_reason": "コンストラクタの引数追加に加え、継承先への伝達、単一・複数出力での配列形状、公開APIと文書の整合が必要。",
+    "feasibility_discussion": "引数の伝達漏れという修正方針は考えられるが、分類器の内部処理と配列形状の検証なしには正しいとは言えない。今回は読解のみ。",
+    "test_reading": "追加テストは引数が通るかだけでなく、単一・複数の分類出力に対するcv_values_の形を確認する。"
+  },
+  {
+    "instance_id": "sympy__sympy-11618",
+    "repo": "sympy/sympy",
+    "row_index": 425,
+    "dataset_revision": "78f471bf655a3137b2e8a75af1501690ec009ec3",
+    "viewer_url": "https://huggingface.co/datasets/SWE-bench/SWE-bench_Verified/viewer/default/test?row=425",
+    "pull_request_url": "https://github.com/sympy/sympy/pull/11618",
+    "original_issue_url": "https://github.com/sympy/sympy/issues/11617",
+    "base_commit": "360290c4c401e386db60723ddb0109ed499c9f6e",
+    "difficulty_label": "15 min - 1 hour",
+    "registered_fail_to_pass_count": 1,
+    "registered_pass_to_pass_count": 4,
+    "counts_note": "Dataset fields, not test results from this assignment. No benchmark tests were executed.",
+    "changed_source_files": [
+      "sympy/geometry/point.py"
+    ],
+    "raw_field_sha256": {
+      "problem_statement": "7eec6e997311bf1014a07659710714c0a891fd0e5b9d58dadb31a83b23746330",
+      "patch": "2dcab4569a942fedbfd80ffa3d8b0a97f03a7b806d35698824dc38e767ebec84",
+      "test_patch": "9db55dd61b4ad7c82838f96a1383f8b182a59e13a31ebc9bdc12e27e7bea1d36"
+    },
+    "summary": "2次元の点と3次元の点の距離で、短い側に合わせた計算により第3座標が無視される。",
+    "required_behavior": "欠けた座標を0として扱い、例の距離が1ではなく√5となること。",
+    "difficulty_reason": "数学的には単純でも、次元の異なるPointの型や引数、既存の距離計算と整合させる必要がある。",
+    "feasibility_discussion": "zipが短い列で止まる性質から原因は理解しやすい。逆向きの引数や別入力への一般性は未検証で、解決済みとはしない。",
+    "test_reading": "追加テストの例は3Dの点から2Dの点への距離が√5になることを確認する。1つの例の通過と、すべての入力での正しさを区別する。"
+  }
+]

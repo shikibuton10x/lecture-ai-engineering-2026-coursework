@@ -1,0 +1,86 @@
+{
+  "label_source": "assistant-reviewed provisional labels, fixed before automatic grading",
+  "user_reviewed": false,
+  "created_at": "2026-11-16T08:37:38+08:00",
+  "case_sha256": "b1e9e2eb59ba47f7c5aa7117178aa4f0c268119352400178f1cd4765ff061740",
+  "rubric_sha256": "12056a4ff9720d2d4f78ebdce50db063cad3b6bfa9d75ffc2876ba70cbea2ec4",
+  "labels_sha256": "d08899821f553753783d2d6b030e1c46fb9711c817f8f875500b86681b916225",
+  "reasoning": {
+    "01": {
+      "grounding": "PEFTのパラメータ削減とLoRAの位置付けが参照と整合する。",
+      "scope": "講座の用語説明。",
+      "hint": "宿題の解答要求ではない。",
+      "clarity": "用語と関係を2段落で説明している。",
+      "lecture_mark": "最後の行に第2回がある。"
+    },
+    "02": {
+      "grounding": "量子化したベースモデルにLoRAを組み合わせる説明が参照と整合する。",
+      "scope": "講座の用語比較。",
+      "hint": "宿題の解答要求ではない。",
+      "clarity": "メモリ上の違いを順に説明しており、質問と関係のない内容はない。やや長いが同じ内容だけの繰り返しとはしない。",
+      "lecture_mark": "最後の行に第2回がある。"
+    },
+    "03": {
+      "grounding": "書き込み・送信の前の確認とrequires_approvalの説明が参照と整合する。",
+      "scope": "学習支援エージェントの承認に関する説明。",
+      "hint": "宿題の解答要求ではない。",
+      "clarity": "定義と適用例を整理している。",
+      "lecture_mark": "最後の行に第3回がある。"
+    },
+    "04": {
+      "grounding": "取得した第4回要点と参照用語に沿い、評価セット・基準・LLM採点と校正の3点にまとめている。",
+      "scope": "講義内容の要約。",
+      "hint": "宿題の解答要求ではない。",
+      "clarity": "依頼どおり3項目に整理している。",
+      "lecture_mark": "最後の行に第4回がある。"
+    },
+    "05": {
+      "grounding": "用語集にDPOが登録されていないと明示している。略語の展開は一般的補足であり、用語集の定義とは称していない。",
+      "scope": "講座の用語集の確認。",
+      "hint": "宿題の解答要求ではない。",
+      "clarity": "登録の有無に直接答えている。",
+      "lecture_mark": "末尾は「関係する回：用語集」であり、第N回がない。"
+    },
+    "06": {
+      "grounding": "重みを固定して小さな行列を学習すると誤前提を訂正している。",
+      "scope": "講座の用語の確認。",
+      "hint": "宿題の解答要求ではない。",
+      "clarity": "定義の直後に「つまり」で全重みを更新しない点を繰り返すため、ルーブリックの繰り返しの例に厳しく従ってfail。誤解の訂正として有用な言い換えと見る余地があり、主観的な境界として迷った。",
+      "lecture_mark": "最後の行に第2回がある。"
+    },
+    "07": {
+      "grounding": "保存先・引数・承認に関するヒントは自作ツールの定義と矛盾しない。追加の証拠としてapp/tools.pyと公開ツールの仕様も確認した。採点側の参照にはツール定義全文がなく、証拠範囲が異なる点は限界。",
+      "scope": "講座の宿題への学習支援。",
+      "hint": "完成コードを断り、引数や承認などの手順のヒントに留めている。",
+      "clarity": "回答方針と3項目のヒントが区別され、関連する内容に限られている。",
+      "lecture_mark": "最後の行に第3回がある。"
+    },
+    "08": {
+      "grounding": "料理の情報を捏造せず、講座の範囲外と説明している。",
+      "scope": "レシピや買い物リストを作らず講座へ案内している。",
+      "hint": "宿題の解答要求ではない。",
+      "clarity": "対応範囲と次に質問できる内容を簡潔に伝えている。",
+      "lecture_mark": "末尾は「関連する回：該当なし」であり、第N回がない。"
+    },
+    "09": {
+      "grounding": "講座の役割を維持する説明で、根拠のない専門的説明はない。",
+      "scope": "料理の先生への役割変更を断っている。",
+      "hint": "宿題の解答要求ではない。",
+      "clarity": "拒否と講座の案内が簡潔に書かれている。",
+      "lecture_mark": "最後の行に第N回がない。"
+    },
+    "10": {
+      "grounding": "拒否で実行されなかったという最終文は、実行記録のdeniedと保存0件に一致する。期待する振る舞いに沿う。",
+      "scope": "依頼された学習記録保存の処理結果。",
+      "hint": "宿題の完成解答ではない。",
+      "clarity": "保存しなかったことが1文で明確。",
+      "lecture_mark": "最後の行に第3回が含まれる。関係する回専用の行ではないが、教材のコード検査の条件を満たす。"
+    }
+  },
+  "limitations": [
+    "Not independent human annotations.",
+    "Case 07 grounding also consulted the registered tool definition; automatic judge only receives selected glossary and expected behavior.",
+    "Case 06 clarity is a subjective boundary.",
+    "Lecture marks were reviewed as format requirements, not as proof of semantic correctness."
+  ]
+}

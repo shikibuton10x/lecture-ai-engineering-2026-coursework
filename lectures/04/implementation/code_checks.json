@@ -1,0 +1,32 @@
+{
+  "lecture_marks_present": [
+    "01",
+    "02",
+    "03",
+    "04",
+    "06",
+    "07",
+    "10"
+  ],
+  "lecture_marks_absent": [
+    "05",
+    "08",
+    "09"
+  ],
+  "lecture04_summary_tool_called": true,
+  "save_requested": true,
+  "save_approval_refused": true,
+  "save_denied_return": true,
+  "save_refusal_produced_zero_files": true,
+  "all_cases_produced_zero_files": true,
+  "additional_diagnostic_glossary_called_for_course_questions": {
+    "01": true,
+    "02": true,
+    "03": true,
+    "04": false,
+    "05": true,
+    "06": true,
+    "07": false
+  },
+  "diagnostic_note": "Search diagnostic applies the existing instruction literally. Case 04 used the summary tool but not glossary search; report separately from the predeclared five grading criteria."
+}

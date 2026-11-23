@@ -5,11 +5,14 @@ TestModel は実際のLLMを呼ばない偽モデルで、登録されたツー�
 「ツールが登録され、呼ばれ、結果がモデルに戻るか」を確かめられる。
 """
 
+import json
+
 from pydantic_ai import DeferredToolRequests
 from pydantic_ai.messages import ToolCallPart, ToolReturnPart
 from pydantic_ai.models.test import TestModel
 
-from app.agent import agent
+from app import tools
+from app.agent import agent, rag_agent
 
 BASE_TOOLS = {"search_glossary", "get_lecture_summary"}
 
@@ -40,3 +43,34 @@ def test_glossary_result_reaches_the_model():
         result = agent.run_sync("RAGとは？")
     returns = _parts(result, ToolReturnPart)
     assert returns and returns[0].tool_name == "search_glossary"
+
+
+def test_material_result_reaches_the_model(monkeypatch):
+    hit = {"page_id": "lec02-main-p052", "lecture": 2, "page": 52, "content": "元の重みは固定"}
+    monkeypatch.setattr("app.retrieval.search", lambda *args, **kwargs: [hit])
+    model = TestModel(call_tools=["search_materials"])
+    with rag_agent.override(model=model):
+        result = rag_agent.run_sync("RAGとは？")
+    returns = _parts(result, ToolReturnPart)
+    assert returns and returns[0].tool_name == "search_materials"
+    assert json.loads(returns[0].content)["results"] == [hit]
+
+
+def test_graph_topics_alternates_ranked_hits_and_deduplicates_pages(monkeypatch):
+    results = {"コンパクション": (39, 13, 38), "OpenClaw": (40, 39, 65)}
+    searched = []
+
+    def search(query):
+        searched.append(query)
+        return [
+            {"page_id": f"lec03-main-p{page:03d}", "distance": index / 10}
+            for index, page in enumerate(results[query])
+        ]
+
+    monkeypatch.setattr("app.retrieval.search", search)
+    related = json.loads(tools.search_graph_topics(["コンパクション", " OpenClaw ", "コンパクション"]))
+    assert searched == ["コンパクション", "OpenClaw"]
+    assert [page["page"] for page in related["seeds"]] == [39, 40, 13]
+    pages = related["seeds"] + related["expanded"]
+    assert len(pages) == len({page["page_id"] for page in pages}) <= 10
+    assert all(page["hops"] <= 2 for page in related["expanded"])
